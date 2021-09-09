@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>    
+</head>
+<style>
+    body{
+        background-color: aliceblue;
+    }
+    .container{
+        padding: 0 20px;
+    }
+    .subcontainer{
+        max-width: 500px;
+        width:100%;
+        height: 350px;
+        margin: 150px auto 0;
+        display: flex;
+        background-color: white;
+       /* box-shadow: 0 0 5px 2px rgb(rgb(0, 174, 255), green, blue);
+    */}
+    .subcontainer .image{
+        width: 220px;
+        height: 100%;
+    }
+    .subcontainer .image img{
+        width: 120%;
+        height: 100%;
+    }
+    .subcontainer .loginform{
+        width: 280px;
+        height: 100%;
+        text-align: left;
+        padding: 40px 35px  0;
+        position: relative;
+        margin-left: 50px;
+        margin-top: 40px;
+       
+ }
+ .subcontainer .loginform .label{
+    color: rgba(12, 1, 1, 0.993);
+     font-size: 16px;
+     outline: none;
+     
+
+}
+.subcontainer .loginform .input{
+    outline: none;
+    border:none;
+    margin: 1px 0 4px;
+    width: 80%;
+    padding: 8px;
+   background-color: rgba(221, 218, 218, 0.972);
+}
+.subcontainer .btn{
+   margin: 3px 0 4px;
+    bottom: 0;
+    left: 0;
+    width: 80%;
+    padding: 8px;
+    background-color: rgba(2, 5, 54, 0.87);
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+.main {
+            display: block;
+            position: relative;
+            padding-left: 25px;
+             cursor: pointer;
+            font-size:15px;
+        }
+        input[type=checkbox] {
+            visibility: hidden;
+        }
+        .checkmark {
+            position: absolute;
+            left: 0px;
+            height: 18px;
+            width: 18px;
+            background-color:rgba(221, 218, 218, 0.972);
+        }
+        .main input:checked ~ .checkmark {
+            background-color:rgba(221, 218, 218, 0.972);
+        }
+          
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+          
+        /* Display checkmark when checked */
+        .main input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .main .checkmark:after {
+          
+           right: 6px;
+            width: 5px;
+            height: 10px;
+            border :solid black;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+@media  screen and (max-width:500px)  {
+    .subcontainer{
+        flex-direction: column-reverse;
+        max-width: 300px;
+        height: auto;
+        margin-top: 50px;
+        
+}
+.subcontainer .image{
+    width: 50%;
+   margin-left: 65px;
+    }
+    .subcontainer .loginform{
+        width: 50%;
+        padding: 20px 35px 0;
+        margin-left: 50px;
+        margin-top: 20px;
+
+    
+    }
+        .btn{
+            margin-top: 20px;
+            padding: 10px;
+
+        }
+
+        }
+</style>
+<body>
+    <div class="container">
+        <div class="subcontainer">
+            <div class="image">
+                <picture>
+                    <source media="(min=width:501px)" srcset="images.jpg">
+                    <source media="(max=width:500px)" srcset="images.jpg">
+                    <img src="images.jpg" >
+                </picture>
+               
+            </div>
+            <div class="loginform">
+                <div class="inputfields">
+                    <label class="label">Username</label>
+                    <input type="text" class="input" minlength="5" and maxlength="10">
+                </div>
+                <div class="inputfields">
+                    <label class="label">Password</label>
+                    <input type="password" class="input" minlength="10" and maxlength="15">
+                </div>
+                <label class="main">Remember me
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <div class="btn">
+                    login
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
